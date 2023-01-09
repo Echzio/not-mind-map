@@ -1,0 +1,10 @@
+{
+  "name": "@not-mind-map/server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "server:dev": "exit 0",
+    "server:build": "exit 0",
+    "server:lint": "exit 0"
+  }
+}
