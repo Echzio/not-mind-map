@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "module": "CommonJS",
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "client/*": ["packages/client/src/*"],
+      "server/*": ["packages/server/src/*"]
+    },
+    "rootDirs": ["packages/types/declarations/*.d.ts"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "useUnknownInCatchVariables": true,
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "postcssOptions": {
+            "useConfig": true
+          }
+        }
+      }
+    ]
+  }
+}
