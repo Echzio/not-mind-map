@@ -1,4 +1,5 @@
 {
+  "include": ["packages/client/*.ts", "packages/server/*.ts", "packages/types/**/*.d.ts"],
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "react-jsx",
@@ -10,7 +11,6 @@
       "client/*": ["packages/client/src/*"],
       "server/*": ["packages/server/src/*"]
     },
-    "rootDirs": ["packages/types/declarations/*.d.ts"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
