@@ -1,6 +1,6 @@
 {
   "name": "@not-mind-map/client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "client:build": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --mode=production --config \"../../client.webpack.config.ts\" --define-process-env-node-env=production",
