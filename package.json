@@ -14,7 +14,8 @@
     "server:build": "yarn lerna run server:build",
     "dev": "yarn client:dev && yarn server:dev",
     "build": "yarn client:build && yarn server:build",
-    "lint": "yarn lerna run client:lint && yarn lerna run server:lint"
+    "lint": "yarn lerna run client:lint && yarn lerna run server:lint",
+    "new-version": "yarn lerna version --conventional-commits --yes"
   },
   "devDependencies": {
     "lerna": "^6.1.0",
