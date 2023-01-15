@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "license": "MIT",
   "scripts": {
-    "client:build": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --mode=production --config \"../../client.webpack.config.ts\" --define-process-env-node-env=production",
-    "client:dev": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack serve --config \"../../client.webpack.config.ts\"",
-    "client:lint": "yarn eslint ./src/**/*.{ts,tsx} --fix && yarn prettier ./src/**/* --w && yarn stylelint ./src/**/*.css"
+    "build": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --mode=production --config \"../../client.webpack.config.ts\" --define-process-env-node-env=production",
+    "dev": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack serve --config \"../../client.webpack.config.ts\"",
+    "lint": "yarn eslint ./src/**/*.{ts,tsx} --fix && yarn prettier ./src/**/* --w && yarn stylelint ./src/**/*.css"
   },
   "dependencies": {
     "classnames": "2.3.2",

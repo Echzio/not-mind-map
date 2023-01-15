@@ -3,8 +3,8 @@
   "version": "1.0.1",
   "license": "MIT",
   "scripts": {
-    "server:dev": "exit 0",
-    "server:build": "exit 0",
-    "server:lint": "exit 0"
+    "dev": "exit 0",
+    "build": "exit 0",
+    "lint": "exit 0"
   }
 }
