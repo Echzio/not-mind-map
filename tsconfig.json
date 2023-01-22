@@ -1,5 +1,4 @@
 {
-  "include": ["packages/client/*.ts", "packages/server/*.ts", "packages/types/**/*.d.ts"],
   "compilerOptions": {
     "target": "ESNext",
     "jsx": "react-jsx",

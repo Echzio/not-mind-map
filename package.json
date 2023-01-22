@@ -8,13 +8,14 @@
     "packages/*"
   ],
   "scripts": {
-    "client:dev": "yarn lerna run client:dev",
-    "client:build": "yarn lerna run client:build",
-    "server:dev": "yarn lerna run server:dev",
-    "server:build": "yarn lerna run server:build",
+    "client:dev": "yarn lerna run dev --scope=@not-mind-map/client",
+    "client:build": "yarn lerna run build --scope=@not-mind-map/client",
+    "server:dev": "yarn lerna run dev --scope=@not-mind-map/server",
+    "server:build": "yarn lerna run build --scope=@not-mind-map/server",
     "dev": "yarn client:dev && yarn server:dev",
     "build": "yarn client:build && yarn server:build",
-    "lint": "yarn lerna run client:lint && yarn lerna run server:lint"
+    "lint": "yarn lerna run lint",
+    "new-version": "yarn lerna version --conventional-commits --yes"
   },
   "devDependencies": {
     "lerna": "^6.1.0",
