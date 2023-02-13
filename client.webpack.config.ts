@@ -28,6 +28,7 @@ const config: webpack.Configuration = {
     open: true,
     host: 'localhost',
     hot: true,
+    port: 8080,
   },
   plugins: [
     new HtmlWebpackPlugin({
