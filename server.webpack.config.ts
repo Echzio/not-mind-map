@@ -2,6 +2,8 @@ import path from 'path'
 import webpack from 'webpack'
 import nodeExternals from 'webpack-node-externals'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const config: webpack.Configuration = {
   entry: [path.join(__dirname, './packages/server/src/index.ts')],
   target: 'node',
@@ -40,4 +42,16 @@ const config: webpack.Configuration = {
   },
 }
 
-export default () => config
+export default () => {
+  if (isProduction) {
+    config.mode = 'production'
+  } else {
+    config.mode = 'development'
+    config.watch = true
+    config.watchOptions = {
+      poll: 1000,
+    }
+  }
+
+  return config
+}

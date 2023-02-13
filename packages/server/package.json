@@ -3,15 +3,18 @@
   "version": "1.0.1",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --config \"../../client.webpack.config.ts\"",
+    "dev": "yarn concurrently \"cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --config \"../../server.webpack.config.ts\"\" \"yarn serve\"",
     "build": "cross-env TS_NODE_PROJECT=\"../../tsconfig.json\" webpack --mode=production --config \"../../server.webpack.config.ts\" --define-process-env-node-env=production",
-    "lint": "yarn prettier ./src/**/* --w && yarn eslint ./src/**/*.{ts,tsx} --fix"
+    "lint": "yarn prettier ./src/**/* --w && yarn eslint ./src/**/*.{ts,tsx} --fix",
+    "serve": "yarn nodemon ../../.build/server.bundle.js --watch ../../.build"
   },
   "dependencies": {
     "fastify": "4.12.0"
   },
   "devDependencies": {
     "@types/webpack-node-externals": "2.5.3",
+    "concurrently": "7.6.0",
+    "nodemon": "2.0.20",
     "webpack-node-externals": "3.0.0"
   }
 }
